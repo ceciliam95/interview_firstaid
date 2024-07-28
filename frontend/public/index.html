@@ -6,22 +6,33 @@
     <link rel="stylesheet" href= "../src/css/styles.css">
 </head>
 <body>
-   <h1 id = start-heading> Interview First-Aid </h1>
-   <h2> About Us </h2>
-   <p> An AI-powered interview practice platform <b> that get your next interview covered! </b> </p>
-   <h2> Pricing </h2>
-   <div> <p>
-       <ul>
-       <li> Pay per Use </li>
-       <li> Monthly Plan </li>
-       <li> Fixed Times  </li>
-       </ul>
-   </p> </div>
-   <h2> <a href = "signup.html"> Sign Up </a> </h2>
-   <p> Sing up today! </p>
+   <div class = 'header'>
+       <h2>
+           <span class = "header-link"> Home </span>
+           <span class = "header-link"> About Us </span>
+           <span class = "header-link"> Pricing </span>
+           <span class = "header-link"> <a href = "signup.html"> Sign Up </a> </span>
+           <span class = "header-link"> Login </span>
+       </h2>
 
-   <h1> <a href = "chatnow.html"> Chat Now </a> </h1>
-   <img src = "../src/image/firstaid_logo.jpg" class = "small-image">
+   </div>
+
+   <div class = 'headline'>
+       <h1> <span id = "headline-interview"> Interview </span>
+            <span id = "headline-first-aid"> First-Aid </span>
+            <p id = logo-sentence> Got you covered for every interview challenge </p>
+       </h1>
+   </div>
+
+   <div id = "chat-starter">
+       <p id = start-sentence> Tell me which interview you want to practice today? </p>
+        <form action = "/start_chat" method = "POST">
+            <input type = "text" />
+        </form>
+        <h2> <a href = "chatnow.html"> Start Now </a> </h2>
+   </div>
+
+
 </body>
 </html>
 

@@ -1,116 +1,114 @@
 /* styles.css */
+ /* #ee499c-pink
+    #5e17eb - dark blue
+ */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial,
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
 }
 
-h1 {
-    color: #333;
-    margin-top: 20px;
+.header {
+    justify-content: space-between;
+    width: 100%;
+    height: 10vm;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
-#start-heading {
-    color:  #dd1abd;
+.header-link {
+    color: #5e17eb;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 0;
 }
 
-h2 {
-    color: #666;
-    margin-top: 20px;
-}
-
-p {
-    color: #555;
-    margin: 10px 0;
-    padding: 0 10px;
-}
-
-b {
+.header-link:hover {
+    color: #5e17eb;
+    font-family: Arial;
+    font-size: 20px;
     font-weight: bold;
+
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    padding: 10px;
-}
-
-div p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Additional styling for better presentation */
-div {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-}
-
-a {
-    color: #007BFF;
+.header-link a {
+    color: inherit;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.small-image {
-    width: 200px;
-    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the specified aspect ratio */
-}
-
-.signup-form {
-    width: 300px;
-    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the specified aspect ratio */
-}
-
-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
+.headline {
+    font-family: Arial;
+    font-size: 70px;
     font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    padding: 0;
+    height: 60vm;
+
 }
 
-input[type="text"],
-input[type="password"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 20px;
+#headline-interview {
+    color:  #ee499c;
+}
+
+#headline-first-aid {
+    color:  #6f5af8;
+}
+
+.headline:hover #headline-interview {
+    color:  #6f5af8;
+}
+
+.headline:hover #headline-first-aid {
+    color:  #ee499c;
+}
+
+#start-heading:hover {
+   font-family: Arial;
+   font-size: 80px;
+    color:  #ee499c;
+}
+
+#logo-sentence {
+   font-family: Arial;
+   font-size: 34px;
+   font-weight: bold;
+   color:  #ee499c;
+
+}
+
+#chat-starter {
+    width: 100%;
+    height: 40vm;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px;
+    border: 0px;
+
+}
+
+#start-sentence{
+   font-family: "Comic Sans MS";
+   font-size: 20px;
+   font-weight: bold;
+   color:  #5e17eb;
+   width: 50%
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 100vm;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
 }
 
