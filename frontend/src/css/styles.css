@@ -7,19 +7,21 @@
     #f7f7f7  - grey
     #000000 - dark black
     #aabab1  - theme light green
+    #FFFFFF - white
  */
 
-html, body {
-    font-family: Arial,
+html, body, .page-body {
+    font-family: Arial;
     margin: 0;
     padding: 0;
     text-align: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
 }
 
-html {
+html, .page-body {
     background-image: url("../image/bg_v1.jpg");
     background-size: cover;
     background-position: center;
@@ -82,7 +84,7 @@ html {
 }
 
 
-#logo-sentence {
+.logo-sentence {
    font-family: Arial;
    font-size: 34px;
    font-weight: bold;
@@ -92,7 +94,7 @@ html {
 
 #chat-starter {
     width: 100%;
-    height: 60%;
+    height: 40%;
     margin-left: 0%;
     margin-right: 0%;
     padding: 0px;
@@ -134,10 +136,18 @@ input[type="text"] {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color:  #416552;
+    color:  #FFFFFF;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #aabab1;
+    background-color: #416552;
+}
+
+.subpage-heading{
+    font-family: Arial;
+    color:  #416552;
+    font-size: 60px;
+    font-weight: bold;
+
 }
 
 /* pricing html */
@@ -145,3 +155,49 @@ input[type="text"] {
     font-family: Arial;
     background-color: #edebfa
 }
+
+.pay-container{
+    height: 80%;
+}
+.pay-row{
+     display: flex;
+     justify-content: space-evenly;
+     height: 80%;
+     margin-top: 5%;
+}
+
+.pay-card{
+    width: 20%;
+    height: 75%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    background-color: #aabab1;
+    font-family: "Comic Sans MS";
+    height: 10%;
+}
+
+.card-content{
+    height: 90%;
+}
+
+.clickable-card:active {
+    background-color: #aabab1; /* Change to your desired color */
+}
+
+.price {
+    font-family: Arial;
+    font-size: 50px;
+    font-weight: bold;
+    color: #416552;
+}
+
+.price-description {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    color: #000000;
+}
+
