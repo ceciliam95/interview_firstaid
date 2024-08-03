@@ -8,6 +8,7 @@
     #000000 - dark black
     #aabab1  - theme light green
     #FFFFFF - white
+    #ffcccb - light red, alert
  */
 
 html, body, .page-body {
@@ -162,8 +163,9 @@ input[type="text"] {
 .pay-row{
      display: flex;
      justify-content: space-evenly;
-     height: 80%;
+     height: 60%;
      margin-top: 5%;
+     width: 100%;
 }
 
 .pay-card{
@@ -201,3 +203,17 @@ input[type="text"] {
     color: #000000;
 }
 
+.alert, .alert-info {
+   background-color: #ffcccb;
+   color: #416552;
+   font-size: 20px;
+   font-weight: bold;
+   text-align: center;
+   width: 70%;
+   border: none;
+   padding: 0%;
+   margin-right: 15%;
+   margin-left: 15%;
+   justify-content: center;
+   align-items: center;
+}
