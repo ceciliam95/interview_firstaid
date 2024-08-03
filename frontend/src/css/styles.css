@@ -2,6 +2,11 @@
  /* #ee499c-pink
     #5e17eb - dark blue
     #6f5af8 - theme blue
+
+    #416552 - theme dark green
+    #f7f7f7  - grey
+    #000000 - dark black
+    #aabab1  - theme light green
  */
 
 html, body {
@@ -34,7 +39,7 @@ html {
 }
 
 .header-link {
-    color: #5e17eb;
+    color: #000000;
     font-family: Arial;
     font-size: 20px;
     font-weight: lighter;
@@ -45,7 +50,7 @@ html {
 }
 
 .header-link:hover {
-    color: #5e17eb;
+    color: #000000;
     font-family: Arial;
     font-size: 20px;
     font-weight: bold;
@@ -69,32 +74,19 @@ html {
 }
 
 #headline-interview {
-    color:  #ee499c;
+    color:  #416552;
 }
 
 #headline-first-aid {
-    color:  #6f5af8;
+    color:  #416552;
 }
-
-.headline:hover #headline-interview {
-    color:  #6f5af8;
-}
-
-.headline:hover #headline-first-aid {
-    color:  #ee499c;
-}
-
-.headline:hover #logo-sentence {
-    color:  #ee499c;
-}
-
 
 
 #logo-sentence {
    font-family: Arial;
    font-size: 34px;
    font-weight: bold;
-   color:  #6f5af8;
+   color:  #000000;
 
 }
 
@@ -118,7 +110,7 @@ html {
    text-align: center;
    font-size: 20px;
    font-weight: bold;
-   color:  #ee499c;
+   color: #000000;
    width: 100%
 }
 
@@ -142,10 +134,10 @@ input[type="text"] {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color:  #5e17eb;
+    color:  #416552;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #edebfa;
+    background-color: #aabab1;
 }
 
 /* pricing html */
