@@ -7,7 +7,7 @@ var person = "John";
 
 if (person == 'John')
 {
-    console.log(person);
+    console.log("haha");
 }
 else
 {
