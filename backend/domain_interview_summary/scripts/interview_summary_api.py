@@ -8,7 +8,7 @@ from openai import OpenAI
 from backend.domain_interview_summary.utils.text_extraction import extract_text_from_url
 import os
 
-test_url = "https://www.seek.com.au/job/77848747?ref=search-standalone&type=promoted&origin=showNewTab#sol=89a46aa19428b85832c0649ccdb85dbdafc0de70"
+test_url = "https://www.seek.com.au/job/77885561?ref=search-standalone&type=promoted&origin=showNewTab#sol=b57613bc4a09b8194818326c2390ef0f4bb385c9"
 
 #extract text:
 test_content = extract_text_from_url(test_url)
@@ -23,6 +23,7 @@ completion = client.chat.completions.create(
 )
 
 output = completion.choices[0].message.content
+
 # output as text for testing
 file_path = './test_files/tset_output.txt'
 os.makedirs(os.path.dirname(file_path), exist_ok=True)
