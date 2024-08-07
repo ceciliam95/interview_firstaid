@@ -3,7 +3,7 @@ Create an api that when user submit an url, it gives a summary.
 """
 
 from interview_summary_prompt import interview_summary_prompt
-from backend.secret import  interview_first_aid_api
+from backend.secrets import  interview_first_aid_api
 from openai import OpenAI
 from backend.domain_interview_summary.utils.text_extraction import extract_text_from_url
 import os
