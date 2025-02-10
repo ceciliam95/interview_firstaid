@@ -12,12 +12,13 @@ from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain.prompts import PromptTemplate
 from langchain.tools import Tool
 
-test_url = "https://www.seek.com.au/job/77885561?ref=search-standalone&type=promoted&origin=showNewTab#sol=b57613bc4a09b8194818326c2390ef0f4bb385c9"
+test_url = "https://www.seek.com.au/job/81950716?ref=search-standalone&type=promoted&origin=showNewTab#sol=d018034de748531f3c3c9b9ac1adb24295c2937d"
 
 os.environ["OpenAI_API_KEY"] = OPENAI_API_KEY
 
 #extract text:
 test_content = extract_text_from_url(test_url)
+
 
 # create teh llm
 llm = ChatOpenAI(model_name = "gpt-4o-mini", temperature = 1)
@@ -42,8 +43,10 @@ ask_question_tool = Tool(
 
 # tools list
 
-tools = [ask_question_tool]
-tool_names = ", ".join([tool.name for tool in tools])
+# tools = [ask_question_tool]
+# tool_names = ", ".join([tool.name for tool in tools])
+tools = []
+tool_names = "nothing"
 agent_scratchpad = ""  # Start with an empty scratchpad
 
 # create prompt template:
@@ -59,10 +62,11 @@ question_gather_prompt = PromptTemplate(
     - mock interview purpose (e.g. if this is a technical interview, behaviour interview, or balanced) 
 
      You should always follows the ReAct (Reasoning + Acting) pattern to answer questions. You action should be one of {tools}, unless you think you
-     have gathered all the required information, then come up with the final list of 10 questions. If you think you are unclear about factors listed above, 
-     then use "ask_clarifying_questions" from {tools}, but clarify each point at most once.
+     have gathered all the required information, then come up with the final list of 15 questions. 
+     
+     Your questions should be categorised with the key skill to test.
     
-    Question: create 10 interview questions for {input}
+    Question: create 15 interview questions for {input}
     Available tools: {tool_names}
 
     Thought: Let's think step by step to break down and gather required information for the final list.
@@ -76,13 +80,21 @@ question_gather_prompt = PromptTemplate(
 # create reAct agent:
 agent = create_react_agent(llm, tools, question_gather_prompt)
 
+# execution flow:
 agent_executor = AgentExecutor(agent = agent, tools = tools, verbose = True)
 
+prestart_question_set = ['what is the mock interviewer role (e.g. HR, Hiring Manager', 'Is this a mock interview for technical or behaviour or balanced?','Any other thing you want to let me know before we start?']
+
+user_response_str = ""
+for i in prestart_question_set:
+    user_response = ask_question_tool.run(i)
+    user_response_str += i + ":" + user_response
+
 test_input = {
-    "input": test_content,  # Replace with actual job post
+    "input": test_content + "user questions answered: " + user_response_str ,  # Replace with actual job post
     "tools": tools,
     "tool_names": tool_names,
     "agent_scratchpad": ""  # Start with an empty scratchpad
 }
 
-agent_executor.invoke({"input": test_input})
+agent_executor.invoke(test_input)
